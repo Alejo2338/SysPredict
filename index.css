@@ -4,18 +4,18 @@
     margin: 0;
     padding: 0;
     border: 0;
-  }
+}
   
-  html {
+html {
     scroll-behavior: smooth;
-  }
+}
   
-  body {
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-  }
+}
   
-  button {
+button {
     font-size: 1.5em;
     font-weight: bold;
     padding: 10px 20px;
@@ -25,23 +25,23 @@
     color: white;
     background-color: rgb(12, 122, 166);
     cursor: pointer;
-  }
+}
   
-  button:hover {
+button:hover {
     background-color: rgb(10, 102, 130);
-  }
+}
   
-  h1 { font-size: 3.5em; }
-  h2 { font-size: 2.5em; }
-  h3 { font-size: 2em; }
-  h4, p { font-size: 1.25em; }
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2em; }
+h4, p { font-size: 1.25em; }
   
-  .container {
+.container {
     max-width: 1000px;
     margin: auto;
-  }
+}
   
-  .header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -52,24 +52,24 @@
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-  }
+}
   
-  .logo img {
+.logo img {
     height: 100px;
     width: auto;
-  }
+}
   
-  .navigation ul {
+.navigation ul {
     list-style: none;
     display: flex;
-  }
+}
   
-  .navigation ul li {
+.navigation ul li {
     position: relative;
     margin: 0 10px;
-  }
+}
   
-  .navigation ul li a {
+.navigation ul li a {
     font-size: 15px;
     font-weight: bold;
     color: black;
@@ -77,36 +77,36 @@
     padding: 10px 15px;
     display: block;
     transition: all 0.2s ease;
-  }
+}
   
-  .navigation ul li a:hover {
+.navigation ul li a:hover {
     background-color: rgb(180, 180, 180);
     border-radius: 5px;
-  }
+}
   
-  /* Slider */
-  #hero {
+/* Slider */
+#hero {
     height: 600px;
     position: relative;
-  }
+}
   
-  .slider {
+.slider {
     width: 100%;
     height: 100%;
     position: relative;
-  }
+}
   
-  .slider input {
+.slider input {
     display: none;
-  }
+}
   
-  .content {
+.content {
     width: 400vw;
     display: flex;
     transition: transform 0.4s ease-in-out;
-  }
+}
   
-  .firstslide, .secondslide, .thirdslide, .fourthslide {
+.firstslide, .secondslide, .thirdslide, .fourthslide {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -116,83 +116,85 @@
     text-align: center;
     background-size: cover;
     background-position: center;
-  }
-  
-  .firstslide { background-image: url(./servicios-informaticos-1.jpg); }
-  .secondslide { background-image: url(./2.jpg); }
-  .thirdslide { background-image: url(./3.jpg); }
-  .fourthslide { background-image: url(./4.webp); }
-  
-  /* Secciones */
-  #num1, #num2 {
+}
+
+/* CORRECCIÓN DE LAS RUTAS DE IMÁGENES */
+.firstslide { background-image: url("img/servicios-informaticos-1.jpg"); }
+.secondslide { background-image: url("img/2.jpg"); }
+.thirdslide { background-image: url("img/3.jpg"); }
+.fourthslide { background-image: url("img/4.webp"); }
+
+/* Secciones */
+#num1, #num2 {
     text-align: center;
     padding: 150px 12px;
-  }
+}
   
-  #num1 h2, #num2 h2 {
+#num1 h2, #num2 h2 {
     font-size: 3em;
     color: rgb(12, 122, 166);
-  }
+}
   
-  #num2 {
+#num2 {
     background-color: rgb(30, 30, 30);
     color: white;
-  }
+}
   
-  /* Footer */
-  footer {
+/* Footer */
+footer {
     background-color: rgb(240, 240, 240);
     padding: 20px;
     text-align: center;
-  }
+}
   
-  .socialicons {
+.socialicons {
     display: flex;
     justify-content: center;
     gap: 15px;
-  }
+}
   
-  .socialicons a {
+.socialicons a {
     font-size: 2.5em;
     color: rgb(12, 122, 166);
     text-decoration: none;
     transition: 0.2s;
-  }
+}
   
-  .socialicons a:hover {
+.socialicons a:hover {
     color: rgb(10, 102, 130);
-  }
+}
   
-  /* Responsividad */
-  @media (max-width: 720px) {
+/* Responsividad */
+@media (max-width: 720px) {
     .navigation {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: white;
-      text-align: center;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
     }
-  
+
     .navigation ul {
-      flex-direction: column;
-      width: 100%;
+        flex-direction: column;
+        width: 100%;
     }
-  
+
     .navigation ul li {
-      display: block;
-      width: 100%;
+        display: block;
+        width: 100%;
     }
-  
+
     #hero {
-      height: 300px;
+        height: 300px;
     }
-  
+
     .firstslide, .secondslide, .thirdslide, .fourthslide {
-      height: 300px;
+        height: 300px;
     }
-  
+
     h1 { font-size: 2em; }
-  }
+}
+
   
