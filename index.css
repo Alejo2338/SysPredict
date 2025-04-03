@@ -1,23 +1,21 @@
-*{
+/* Reset y Configuración Global */
+* {
     box-sizing: border-box;
-}
-*,
-*::before,
-*::after{
     margin: 0;
     padding: 0;
-    border: inherit;
+    border: 0;
 }
-
-html{
+  
+html {
     scroll-behavior: smooth;
 }
-
-body{
-    font-family: 'roboto', sans-serif;
+  
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
 }
-button{
+  
+button {
     font-size: 1.5em;
     font-weight: bold;
     padding: 10px 20px;
@@ -26,402 +24,231 @@ button{
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     color: white;
     background-color: rgb(12, 122, 166);
+    cursor: pointer;
 }
-button:hover{
+  
+button:hover {
     background-color: rgb(10, 102, 130);
 }
 
-h1{ font-size: 3.5em;}
-h2{ font-size: 2.5em;}  
-h3{ font-size: 2em;}
-h4{ font-size: 1.25em;} 
-p{ font-size: 1.25em; } 
-
-.container{
+/* Tamaños de fuentes globales */
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2em; }
+h4, p { font-size: 1.25em; }
+  
+.container {
     max-width: 1000px;
+    margin: auto;
 }
-.header{
+  
+.header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background-color: rgb(243, 243, 243);
-    padding: 0px 10%;
+    padding: 10px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
 }
-.logo{
-    margin: auto;
-    background-image:url(./logo.jpg);
-    background-size: cover;
-    background-position: center center;
+  
+.logo img {
     height: 100px;
-    width: 300px;
-    padding: 0 28%;
+    width: auto;
 }
-.navigation ul{
+  
+.navigation ul {
     list-style: none;
+    display: flex;
 }
-.header .navigation ul li{
-    float: left;
+  
+.navigation ul li {
     position: relative;
+    margin: 0 10px;
 }
-.header .navigation ul li a{
+  
+.navigation ul li a {
     font-size: 15px;
     font-weight: bold;
     color: black;
     text-decoration: none;
-    padding: 20px;
+    padding: 10px 15px;
     display: block;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 }
-.header .navigation ul li a:hover{
+  
+.navigation ul li a:hover {
     background-color: rgb(180, 180, 180);
-}
-.header .navigation ul li ul{
-    position: absolute;
-    right: 0;
-    width: 170px;
-    background-color: rgb(243, 243, 243);
-    display: none;
-}
-.header .navigation ul li ul li a{
-    font-size: 15px;
-    text-transform: capitalize;
-}
-.header .navigation ul li ul li ul{
-    position: absolute;
-    top: 0;
-    right: 300px;
-}
-.header .navigation ul li ul li{
-    width: 100%;
-}
-.header .navigation ul li:hover > ul {
-    display: initial;
-}
-#toggle,
-.header label{
-    display: none;
-    cursor: pointer;
-}
-.menu{
-    width: 45px;
-    height: 35px;
-
+    border-radius: 5px;
 }
 
-#hero{
+/* Slider */
+#hero {
     height: 600px;
+    position: relative;
 }
-#hero .slider input{
-        visibility: hidden;
-        display: none;
-    }
-    #hero .buttons{
-        position: absolute;
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        bottom: 50px;
-        gap: 10px;
-    }
-    #hero .buttons label{
-        width: 20px;
-        height: 20px;
-        background-color: white;
-        border-radius: 30%;
-        opacity: 0.5;
-        cursor: pointer;
-        z-index: 1;
-        transition: 300ms ease-in-out;
-    }
-    #hero .buttons label:hover{
-        scale: 1.2;
-        opacity: 1;
-    }
-    #hero .slider input:nth-child(1):checked ~ .buttons label:nth-child(1),
-    #hero .slider input:nth-child(2):checked ~ .buttons label:nth-child(2),
-    #hero .slider input:nth-child(3):checked ~ .buttons label:nth-child(3),
-    #hero .slider input:nth-child(4):checked ~ .buttons label:nth-child(4)
-    {
-        opacity: 1;
-        scroll-margin: 1.2;
-        width: 40px;
-        padding-left: 0%;
-    }
-    #hero .content{
-        position: absolute;
-        width: 400vw;
-        display: flex;
-        transition: 400ms ease-in-out;
-    }
-    #hero .firstslide,.secondslide,.thirdslide,.fourthslide{
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #hero .firstslide{
-        background-image: 
-        linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-        url(./servicios-informaticos-1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        color: white;
-        text-align: center;
-    }
-    #hero .secondslide{
-        background-image: 
-        linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-        url(./2.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        text-align: center;
-        color: white;
-    }
-    #hero .thirdslide{
-        background-image: 
-        linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-        url(./3.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        text-align: center;
-        color: white;
-    }
-    #hero .fourthslide{
-        background-image: 
-        linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-        url(./4.webp);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        text-align: center;
-        color: white;
-    }
-    .slider input:nth-child(1):checked ~ .content{
-        left: 0;
-    }
-    .slider input:nth-child(2):checked ~ .content{
-        left: -100vw;
-    }
-    .slider input:nth-child(3):checked ~ .content{
-        left: -200vw;
-    }
-    .slider input:nth-child(4):checked ~ .content{
-        left: -300vw;
-    }
-#num1 .container{
-    margin: auto;
+  
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+  
+.slider input {
+    display: none;
+}
+  
+.content {
+    width: 400vw;
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+  
+.firstslide, .secondslide, .thirdslide, .fourthslide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+/* CORRECCIÓN DE LAS RUTAS DE IMÁGENES */
+.firstslide { background-image: url("img/servicios-informaticos-1.jpg"); }
+.secondslide { background-image: url("img/2.jpg"); }
+.thirdslide { background-image: url("img/3.jpg"); }
+.fourthslide { background-image: url("img/4.webp"); }
+
+/* Secciones */
+#num1, #num2 {
     text-align: center;
     padding: 150px 12px;
 }
-#num1 h2{
+  
+#num1 h2, #num2 h2 {
     font-size: 3em;
     color: rgb(12, 122, 166);
 }
-
-#num2{
+  
+#num2 {
     background-color: rgb(30, 30, 30);
-    color:  white;
+    color: white;
+}
+  
+/* Footer */
+footer {
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
     text-align: center;
 }
-#num2 .container{
-    margin: auto;
-    padding: 100px 10px;
-}
-#num2 h2{
-    margin-top: 0;
-    font-size: 3em;
-}
-#num2 p{
-    display: none;
-}   
-#num2 .carta{
-    background-position: center center;
-    background-size: cover;
-    padding: 50px;
-    margin: 20px;
-    border-radius: 15px;
-
-}
-.carta:first-child{
-    background-image:
-    linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-    url(./programacion-software.jpg);
-}
-.carta:nth-child(2){
-    background-image: 
-    linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-    url(./ingenieria-datos.jpg);
-}
-.carta:nth-child(3){
-    background-image: 
-    linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-    url(./inteligencia-artificial.jpg)
-}
-
-#num3 {
-    display: flex;  
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height: 90vh;
-    background-image: 
-    linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-    url(./lenguajes-programacion-trabajo.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    color: white
-}
-#num3 h2{
-    font-size: 5em;
-}
-
-#num4{
-    background-color: rgb(240, 240, 240);
-    padding: 10px;
-}
-
-footer{
-    background-color: rgb(240, 240, 240);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.footercontainer{
-    margin: auto;
-    width: 100%;
-    padding: 20px 20px 20px;
-}
-.socialicons{
+  
+.socialicons {
     display: flex;
     justify-content: center;
+    gap: 15px;
 }
-.socialicons a{
-    text-decoration: none;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 50%;
-}
-.socialicons a i{
+  
+.socialicons a {
     font-size: 2.5em;
     color: rgb(12, 122, 166);
-    opacity: 0.9;
-}
-.socialicons a:hover{
-    background-color: rgb(12, 122, 166);
+    text-decoration: none;
     transition: 0.2s;
 }
-.socialicons a:hover i{
-    background-color: white;
-    transition: 0.2s;
-}
-.footerbottom{
-    background-color: rgb(240, 240, 240);
-    padding: 5px;
-    text-align: center;
-}
-.footerbottom p{
-    color:  rgb(38, 38, 38);
+  
+.socialicons a:hover {
+    color: rgb(10, 102, 130);
 }
 
-@media(min-width:720px){
-    header{
-        position: fixed;
-        width: 100%;
-    }
-    .logo{
-        padding: 0;
-    }
+/* Responsividad */
+
+/* Dispositivos pequeños (600px o menos) */
+@media (max-width: 600px) {
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
     
-
-    #hero{
-        height: 600px;
-    }
-    #hero .buttons{
-        position: absolute;
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        bottom: 50px;
-        gap: 10px;
-        align-items: center;
-    }
-
-    #num1 .container{
-        margin: auto;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    #num1 .img-container{
-        margin: auto;
-        background-image:url(./quienes-somos.jpg);
-        background-size: cover;
-        background-position: center center;
-        height: 500px;
-        width: 600px;
-    }
-    #num1 .texto{
-        width: 70%;
-        max-width: 600px;
-        text-align: initial;
-        padding-left: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    #num1 h2{
-        margin-top: 0px;
-    }
-    
-    #num2 .programas{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-    #num2 .programas p{
+    /* Ajuste de la navegación */
+    .navigation {
         display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
     }
-    #num2 h3{
-        margin-top: 0;
-        margin-bottom: 5px;
+
+    .navigation ul {
+        flex-direction: column;
     }
-    #num2 h4{
-        padding: 0;
-        margin-top: 0;
+
+    .navigation ul li {
+        display: block;
+        width: 100%;
     }
-    #num2 .carta{
-        padding: 20px;
-        background-size: 100% 150px;
-        background-repeat: no-repeat;
-        background-position-y: 0;
-        background-color: rgb(40, 40, 40);
-        box-shadow: 2px 2px 10px rgb(20, 20, 20);
+
+    /* Ajuste del slider */
+    #hero {
+        height: 300px;
     }
-    #num2 .carta:first-child p{
-        padding-top: 15px;
+
+    .firstslide, .secondslide, .thirdslide, .fourthslide {
+        height: 300px;
     }
-    #num2 .carta:nth-child(2) p{
-        padding-top: 35px;
-    }
-    #num2 .carta:nth-child(3) p{
-        padding-top: 15px;
-    }
+}
+
+/* Dispositivos de entre 601px y 1024px (tabletas) */
+@media (max-width: 1024px) {
+    h1 { font-size: 3em; }
+    h2 { font-size: 2.5em; }
     
-    #num3{
+    /* Ajuste de la navegación */
+    .navigation {
+        display: flex;
+    }
+
+    .navigation ul {
+        flex-direction: row;
+    }
+
+    /* Ajuste del slider */
+    #hero {
+        height: 400px;
+    }
+
+    .firstslide, .secondslide, .thirdslide, .fourthslide {
+        height: 400px;
+    }
+}
+
+/* Dispositivos de más de 1024px (escritorios) */
+@media (min-width: 1025px) {
+    h1 { font-size: 3.5em; }
+    h2 { font-size: 2.8em; }
+
+    /* Ajuste de la navegación */
+    .navigation {
+        display: flex;
+    }
+
+    .navigation ul {
+        flex-direction: row;
+    }
+
+    /* Ajuste del slider */
+    #hero {
         height: 600px;
     }
 
-
+    .firstslide, .secondslide, .thirdslide, .fourthslide {
+        height: 600px;
+    }
 }
 
   
