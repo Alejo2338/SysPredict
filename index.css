@@ -30,15 +30,15 @@ button {
 button:hover {
     background-color: rgb(10, 102, 130);
 }
-  
+
+/* Tamaños de fuentes globales */
 h1 { font-size: 3.5em; }
 h2 { font-size: 2.5em; }
 h3 { font-size: 2em; }
 h4, p { font-size: 1.25em; }
   
 .container {
-    max-width: 100%;
-    padding: 0 10px;
+    max-width: 1000px;
     margin: auto;
 }
   
@@ -84,7 +84,7 @@ h4, p { font-size: 1.25em; }
     background-color: rgb(180, 180, 180);
     border-radius: 5px;
 }
-  
+
 /* Slider */
 #hero {
     height: 600px;
@@ -102,7 +102,7 @@ h4, p { font-size: 1.25em; }
 }
   
 .content {
-    width: 400%; /* Ajustado de 400vw a 400% */
+    width: 400vw;
     display: flex;
     transition: transform 0.4s ease-in-out;
 }
@@ -115,9 +115,8 @@ h4, p { font-size: 1.25em; }
     align-items: center;
     color: white;
     text-align: center;
-    background-size: cover; /* Ajusta las imágenes de fondo */
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; /* No repetir la imagen */
 }
 
 /* CORRECCIÓN DE LAS RUTAS DE IMÁGENES */
@@ -141,18 +140,7 @@ h4, p { font-size: 1.25em; }
     background-color: rgb(30, 30, 30);
     color: white;
 }
-
-.programas {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.carta {
-    width: 30%; /* Ajustado para pantallas pequeñas */
-    margin-bottom: 20px;
-}
-
+  
 /* Footer */
 footer {
     background-color: rgb(240, 240, 240);
@@ -176,15 +164,18 @@ footer {
 .socialicons a:hover {
     color: rgb(10, 102, 130);
 }
-  
-/* Responsividad */
-@media (max-width: 720px) {
-    /* Meta etiqueta viewport para dispositivos móviles */
-    /* No olvides agregar esta línea en tu archivo HTML dentro del <head>: */
-    /* <meta name="viewport" content="width=device-width, initial-scale=1"> */
 
+/* Responsividad */
+
+/* Dispositivos pequeños (600px o menos) */
+@media (max-width: 600px) {
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
+    
+    /* Ajuste de la navegación */
     .navigation {
-        display: none;
+        display: block;
         position: absolute;
         top: 100%;
         left: 0;
@@ -195,7 +186,6 @@ footer {
 
     .navigation ul {
         flex-direction: column;
-        width: 100%;
     }
 
     .navigation ul li {
@@ -203,37 +193,61 @@ footer {
         width: 100%;
     }
 
+    /* Ajuste del slider */
     #hero {
-        height: 300px; /* Ajustado para pantallas pequeñas */
+        height: 300px;
     }
 
     .firstslide, .secondslide, .thirdslide, .fourthslide {
-        height: 300px; /* Ajustado para pantallas pequeñas */
-    }
-
-    h1 {
-        font-size: 2.5em; /* Aumentado el tamaño del título */
-    }
-
-    .container {
-        padding: 0 10px;
-    }
-
-    /* Ajuste del padding y márgenes */
-    #num1, #num2 {
-        padding: 100px 12px; /* Ajuste del espacio superior e inferior */
-    }
-
-    .programas {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .carta {
-        width: 100%; /* Ajustado para pantallas pequeñas */
-    }
-
-    footer {
-        padding: 20px 10px;
+        height: 300px;
     }
 }
+
+/* Dispositivos de entre 601px y 1024px (tabletas) */
+@media (max-width: 1024px) {
+    h1 { font-size: 3em; }
+    h2 { font-size: 2.5em; }
+    
+    /* Ajuste de la navegación */
+    .navigation {
+        display: flex;
+    }
+
+    .navigation ul {
+        flex-direction: row;
+    }
+
+    /* Ajuste del slider */
+    #hero {
+        height: 400px;
+    }
+
+    .firstslide, .secondslide, .thirdslide, .fourthslide {
+        height: 400px;
+    }
+}
+
+/* Dispositivos de más de 1024px (escritorios) */
+@media (min-width: 1025px) {
+    h1 { font-size: 3.5em; }
+    h2 { font-size: 2.8em; }
+
+    /* Ajuste de la navegación */
+    .navigation {
+        display: flex;
+    }
+
+    .navigation ul {
+        flex-direction: row;
+    }
+
+    /* Ajuste del slider */
+    #hero {
+        height: 600px;
+    }
+
+    .firstslide, .secondslide, .thirdslide, .fourthslide {
+        height: 600px;
+    }
+}
+
