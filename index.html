@@ -1,86 +1,129 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Página</title>
-    <!-- Cambié la referencia al archivo CSS -->
-    <link rel="stylesheet" href="index.css"> 
+    
+    <title>SysPredict</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="logo"></div>
-        <nav class="navigation">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Slider -->
-    <section id="hero">
-        <h1>Bienvenidos a Nuestro Servicio</h1>
-        <div class="slider">
-            <input type="radio" name="slider" id="slide1" checked>
-            <input type="radio" name="slider" id="slide2">
-            <input type="radio" name="slider" id="slide3">
-            <input type="radio" name="slider" id="slide4">
+    <header class="header">    
+            <div class="logo"></div>
+            <input type="checkbox" id="toggle">
+            <label for="toggle"> <img class="menu" src="" alt="menu"></label>
             
-            <div class="content">
-                <div class="firstslide">
-                    <h2>Slide 1</h2>
-                    <p>Descripción del primer slide</p>
-                </div>
-                <div class="secondslide">
-                    <h2>Slide 2</h2>
-                    <p>Descripción del segundo slide</p>
-                </div>
-                <div class="thirdslide">
-                    <h2>Slide 3</h2>
-                    <p>Descripción del tercer slide</p>
-                </div>
-                <div class="fourthslide">
-                    <h2>Slide 4</h2>
-                    <p>Descripción del cuarto slide</p>
-                </div>
-            </div>
+            <nav class="navigation">
 
-            <!-- Botones de control del slider -->
-            <div class="buttons">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-                <label for="slide4"></label>
+                <ul>
+                    <li><a href="#">INICIO</a>
+                        <ul>
+                            <li><a href="#num1">Quienes Somos</a></li>
+                            <li><a href="#num2">Servicios</a></li>
+                            <li><a href="#num3">Trabaja con Nosotros</a></li>
+                            <li><a href="#num4">Contactos</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+            
+            
+            
+    </header>
+    
+    <section id="hero">
+        <div class="container">
+            <div class="slider">
+                <input type="radio" name="slider" id="slideone" checked>
+                <input type="radio" name="slider" id="slidetwo">
+                <input type="radio" name="slider" id="slidethree">
+                <input type="radio" name="slider" id="slidefour">
+
+                <div class="buttons">
+                    <label for="slideone"></label>
+                    <label for="slidetwo"></label>
+                    <label for="slidethree"></label>
+                    <label for="slidefour"></label>
+                </div>
+
+                <div class="content">
+                    <div class="firstslide"><h1>Servicios Informaticos</h1></div>
+                    <div class="secondslide"><h1>Programacion de Software</h1></div>
+                    <div class="thirdslide"><h1>Ingeniería de Datos</h1></div>
+                    <div class="fourthslide"><h1>Inteligencia Artificial</h1></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Resto del contenido -->
     <section id="num1">
         <div class="container">
-            <h2>¿Quiénes somos?</h2>
             <div class="img-container"></div>
             <div class="texto">
-                <p>Somos una empresa dedicada a ofrecer soluciones innovadoras en el campo de la tecnología.</p>
+                <h2>SysPredict</h2>
+                <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum laudantium voluptatum voluptate repudiandae, a impedit obcaecati vel repellendus iusto odit distinctio voluptatibus beatae quasi sit, autem velit facere repellat itaque.
+            </p>
             </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footercontainer">
-            <div class="socialicons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="footerbottom">
-                <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
-            </div>
+    <section id="num2">
+        <div class="container">
+            <h2>Servicios</h2>
+                <div class="programas">
+                    <div class="carta">
+                            <h3>Programacion de Software</h3>
+                            <p>
+                                <br>
+                                <br>
+                                Lorem ipsum dolor sit  amet consectetur adipisicing elit. Suscipit eveniet necessitatibus explicabo. Inventore ipsa architecto eum quasi porro, aut deleniti asperiores animi ea sed natus culpa repellat, exercitationem laudantium! Modi?
+                            </p>
+                        </div> 
+                        <div class="carta"> 
+                            <h3>Ingeniería de Datos</h3>
+                            <h4>Business inteligente</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolorem veritatis laborum dignissimos omnis! Accusantium quaerat distinctio, laborum quibusdam consequuntur at sit exercitationem porro, pariatur autem voluptate dolore quo nostrum?
+                            </p>
+                        </div>
+                        <div class="carta">
+                            <h3>Inteligencia Artificial</h3>
+                            <h4>Generacion de modelos</h4>
+                            <p>
+                                <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dignissimos, ullam velit nam ipsum vel ut repellendus repudiandae aliquam minima libero deserunt inventore. Magnam sit nobis porro velit consequatur enim?
+                            </p>
+                        </div>      
+                </div>
+                
         </div>
+        
+    </section>
+
+    <section id="num3">
+                <h2>Trabaja con Nosotros</h2>
+                <button>UNETE A NOSOTROS</button>
+
+    </section>
+
+    <footer>
+        <section id="num4">
+            <div class="footercontainer">
+                <div class="socialicons">
+                    <a target="_blank" href="https://www.instagram.com/juan_marrugoh/"><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/juanmanuel.marrugoherbales.3"><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/juan_marrugoh/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+             <div class="footerbottom">
+                    <p>Copyright &copy;2024; SysPredict</p>
+                </div>
+        </section>
+        
     </footer>
 </body>
 </html>
