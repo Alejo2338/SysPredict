@@ -114,7 +114,9 @@ p{ font-size: 1.25em; }
 }
 
 #hero{
-    height: 600px;
+    height: 100vh; /* Hace que el slider ocupe toda la pantalla */
+    overflow: hidden; /* Evita desplazamientos indeseados */
+    position: relative;
 }
 #hero .slider input{
         visibility: hidden;
@@ -155,6 +157,7 @@ p{ font-size: 1.25em; }
     #hero .content{
         position: absolute;
         width: 400vw;
+        height: 100vh;
         display: flex;
         transition: 400ms ease-in-out;
     }
