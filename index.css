@@ -14,7 +14,7 @@ html{
 }
 
 body{
-    font-family: 'roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 button{
@@ -31,49 +31,62 @@ button:hover{
     background-color: rgb(10, 102, 130);
 }
 
-h1{ font-size: 3.5em;}
-h2{ font-size: 2.5em;}  
-h3{ font-size: 2em;}
-h4{ font-size: 1.25em;} 
-p{ font-size: 1.25em; } 
+h1{
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Ajuste con clamp() para mejor escalabilidad */
+}
+h2{ 
+    font-size: clamp(1.5rem, 4vw, 2.5rem); 
+}  
+h3{ 
+    font-size: clamp(1.2rem, 3vw, 2rem); 
+}
+h4{ 
+    font-size: 1.25em; 
+} 
+p{
+    font-size: 1.25em; 
+}
 
 .container{
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1000px; /* Se ajusta al 100% del contenedor */
+    margin: auto;
 }
+
 .header{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background-color: rgb(243, 243, 243);
-    padding: 0px 10%;
+    padding: 0 5%; /* Ajuste para mejor espaciado */
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
 }
 .logo{
-    margin: auto;
     background-image:url(./logo.jpg);
     background-size: cover;
     background-position: center center;
     height: 100px;
     width: 300px;
-    padding: 0 28%;
+    padding: 0 20%;
 }
 .navigation ul{
     list-style: none;
+    display: flex;
+    gap: 20px; /* Espaciado entre elementos */
 }
 .header .navigation ul li{
-    float: left;
     position: relative;
 }
 .header .navigation ul li a{
-    font-size: 15px;
+    font-size: 1rem; /* Ajuste de tamaño */
     font-weight: bold;
     color: black;
     text-decoration: none;
-    padding: 20px;
+    padding: 15px;
     display: block;
     transition: all .2s ease;
 }
@@ -87,339 +100,159 @@ p{ font-size: 1.25em; }
     background-color: rgb(243, 243, 243);
     display: none;
 }
-.header .navigation ul li ul li a{
-    font-size: 15px;
-    text-transform: capitalize;
-}
-.header .navigation ul li ul li ul{
-    position: absolute;
-    top: 0;
-    right: 300px;
-}
-.header .navigation ul li ul li{
-    width: 100%;
-}
 .header .navigation ul li:hover > ul {
-    display: initial;
+    display: block;
 }
+
 #toggle,
 .header label{
     display: none;
     cursor: pointer;
 }
+
 .menu{
     width: 45px;
     height: 35px;
-
 }
 
+/* Hero Section */
 #hero{
     height: 600px;
-}
-#hero .slider input{
-        visibility: hidden;
-        display: none;
-    }
-    #hero .buttons{
-        position: absolute;
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        bottom: 50px;
-        gap: 10px;
-    }
-    #hero .buttons label{
-        width: 20px;
-        height: 20px;
-        background-color: white;
-        border-radius: 30%;
-        opacity: 0.5;
-        cursor: pointer;
-        z-index: 1;
-        transition: 300ms ease-in-out;
-    }
-    #hero .buttons label:hover{
-        scale: 1.2;
-        opacity: 1;
-    }
-    #hero .slider input:nth-child(1):checked ~ .buttons label:nth-child(1),
-    #hero .slider input:nth-child(2):checked ~ .buttons label:nth-child(2),
-    #hero .slider input:nth-child(3):checked ~ .buttons label:nth-child(3),
-    #hero .slider input:nth-child(4):checked ~ .buttons label:nth-child(4)
-    {
-        opacity: 1;
-        scroll-margin: 1.2;
-        width: 40px;
-        padding-left: 0%;
-    }
-    #hero .content{
-        position: absolute;
-        width: 400vw;
-        display: flex;
-        transition: 400ms ease-in-out;
-    }
-    #hero .firstslide,.secondslide,.thirdslide,.fourthslide{
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #hero .firstslide{
-        background-image: 
-        linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-        url(./servicios-informaticos-1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        color: white;
-        text-align: center;
-    }
-    #hero .secondslide{
-        background-image: 
-        linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-        url(./2.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        text-align: center;
-        color: white;
-    }
-    #hero .thirdslide{
-        background-image: 
-        linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-        url(./3.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        text-align: center;
-        color: white;
-    }
-    #hero .fourthslide{
-        background-image: 
-        linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-        url(./4.webp);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        text-align: center;
-        color: white;
-    }
-    .slider input:nth-child(1):checked ~ .content{
-        left: 0;
-    }
-    .slider input:nth-child(2):checked ~ .content{
-        left: -100vw;
-    }
-    .slider input:nth-child(3):checked ~ .content{
-        left: -200vw;
-    }
-    .slider input:nth-child(4):checked ~ .content{
-        left: -300vw;
-    }
-#num1 .container{
-    margin: auto;
-    text-align: center;
-    padding: 150px 12px;
-}
-#num1 h2{
-    font-size: 3em;
-    color: rgb(12, 122, 166);
-}
-
-#num2{
-    background-color: rgb(30, 30, 30);
-    color:  white;
-    text-align: center;
-}
-#num2 .container{
-    margin: auto;
-    padding: 100px 10px;
-}
-#num2 h2{
-    margin-top: 0;
-    font-size: 3em;
-}
-#num2 p{
-    display: none;
-}   
-#num2 .carta{
-    background-position: center center;
-    background-size: cover;
-    padding: 50px;
-    margin: 20px;
-    border-radius: 15px;
-
-}
-.carta:first-child{
-    background-image:
-    linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-    url(./programacion-software.jpg);
-}
-.carta:nth-child(2){
-    background-image: 
-    linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-    url(./ingenieria-datos.jpg);
-}
-.carta:nth-child(3){
-    background-image: 
-    linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-    url(./inteligencia-artificial.jpg)
-}
-
-#num3 {
-    display: flex;  
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height: 90vh;
-    background-image: 
-    linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3) ),
-    url(./lenguajes-programacion-trabajo.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    color: white
-}
-#num3 h2{
-    font-size: 5em;
-}
-
-#num4{
-    background-color: rgb(240, 240, 240);
-    padding: 10px;
-}
-
-footer{
-    background-color: rgb(240, 240, 240);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.footercontainer{
-    margin: auto;
-    width: 100%;
-    padding: 20px 20px 20px;
-}
-.socialicons{
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.socialicons a{
-    text-decoration: none;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 50%;
+#hero .slider input{
+    visibility: hidden;
+    display: none;
 }
-.socialicons a i{
-    font-size: 2.5em;
-    color: rgb(12, 122, 166);
-    opacity: 0.9;
+#hero .buttons{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 50px;
+    gap: 10px;
 }
-.socialicons a:hover{
-    background-color: rgb(12, 122, 166);
-    transition: 0.2s;
-}
-.socialicons a:hover i{
+#hero .buttons label{
+    width: 20px;
+    height: 20px;
     background-color: white;
-    transition: 0.2s;
+    border-radius: 30%;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
 }
-.footerbottom{
-    background-color: rgb(240, 240, 240);
-    padding: 5px;
+#hero .buttons label:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+#hero .content{
+    display: flex;
+    width: 400%;
+    transition: 400ms ease-in-out;
+}
+#hero .firstslide, .secondslide, .thirdslide, .fourthslide{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
     text-align: center;
 }
-.footerbottom p{
-    color:  rgb(38, 38, 38);
+
+#hero .firstslide{
+    background-image: linear-gradient(rgba(0,0,0, 0.3), rgba(0,0,0, 0.3)), url(./servicios-informaticos-1.jpg);
+}
+#hero .secondslide{
+    background-image: linear-gradient(rgba(0,0,0, 0.3), rgba(0,0,0, 0.3)), url(./2.jpg);
+}
+#hero .thirdslide{
+    background-image: linear-gradient(rgba(0,0,0, 0.3), rgba(0,0,0, 0.3)), url(./3.jpg);
+}
+#hero .fourthslide{
+    background-image: linear-gradient(rgba(0,0,0, 0.3), rgba(0,0,0, 0.3)), url(./4.webp);
 }
 
-@media(min-width:720px){
-    header{
-        position: fixed;
-        width: 100%;
+/* Responsiveness */
+@media(max-width: 768px){
+    .header{
+        flex-direction: column;
+        padding: 10px;
     }
     .logo{
-        padding: 0;
+        width: 200px;
+        height: 60px;
     }
-    
-
-    #hero{
-        height: 600px;
-    }
-    #hero .buttons{
-        position: absolute;
-        display: flex;
+    .navigation{
+        display: none;
         width: 100%;
-        justify-content: center;
-        bottom: 50px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .navigation ul{
+        flex-direction: column;
         gap: 10px;
-        align-items: center;
+    }
+    #toggle:checked + .navigation{
+        display: flex;
+    }
+    .menu{
+        display: block;
+    }
+
+    h1{
+        font-size: 2em;
+    }
+    h2{
+        font-size: 1.8em;
+    }
+    p{
+        font-size: 1em;
+    }
+
+    /* Ajuste del slider */
+    #hero{
+        height: 500px;
+    }
+    #hero .content{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+/* Mejoras para pantallas pequeñas */
+@media(max-width: 480px){
+    .logo{
+        height: 50px;
+        width: 150px;
+    }
+
+    .header .navigation ul li a{
+        font-size: 0.9rem;
     }
 
     #num1 .container{
-        margin: auto;
-        display: flex;
-        justify-content: space-evenly;
+        padding: 50px 15px;
     }
-    #num1 .img-container{
-        margin: auto;
-        background-image:url(./quienes-somos.jpg);
-        background-size: cover;
-        background-position: center center;
-        height: 500px;
-        width: 600px;
-    }
-    #num1 .texto{
-        width: 70%;
-        max-width: 600px;
-        text-align: initial;
-        padding-left: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    #num1 h2{
-        margin-top: 0px;
-    }
-    
-    #num2 .programas{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-    #num2 .programas p{
-        display: block;
-    }
-    #num2 h3{
-        margin-top: 0;
-        margin-bottom: 5px;
-    }
-    #num2 h4{
-        padding: 0;
-        margin-top: 0;
-    }
+
     #num2 .carta{
+        background-size: cover;
+        height: 200px;
         padding: 20px;
-        background-size: 100% 150px;
-        background-repeat: no-repeat;
-        background-position-y: 0;
-        background-color: rgb(40, 40, 40);
-        box-shadow: 2px 2px 10px rgb(20, 20, 20);
     }
-    #num2 .carta:first-child p{
-        padding-top: 15px;
-    }
-    #num2 .carta:nth-child(2) p{
-        padding-top: 35px;
-    }
-    #num2 .carta:nth-child(3) p{
-        padding-top: 15px;
-    }
-    
+
     #num3{
-        height: 600px;
+        height: 500px;
+        text-align: center;
     }
 
-
+    #num4{
+        padding: 10px;
+    }
 }
+
+
