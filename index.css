@@ -454,24 +454,31 @@ footer{
     }
 
     .slider input:nth-child(1):checked ~ .content {
-        transform: translateY(0%);
+    transform: translateY(0vh);
+    left: unset;
     }
     .slider input:nth-child(2):checked ~ .content {
-        transform: translateY(-100vh);
+    transform: translateY(-100vh);
+    left: unset;
     }
     .slider input:nth-child(3):checked ~ .content {
-        transform: translateY(-200vh);
+    transform: translateY(-200vh);
+    left: unset;
     }
     .slider input:nth-child(4):checked ~ .content {
-        transform: translateY(-300vh);
+    transform: translateY(-300vh);
+    left: unset;
     }
 
+
     #hero .content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        flex-direction: column;
-        width: 100vw;
-        transition: transform 400ms ease-in-out;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    width: 100vw;
+    height: 400vh;
+    transition: transform 400ms ease-in-out;
+}
+
 }
