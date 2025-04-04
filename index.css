@@ -161,12 +161,15 @@ p{ font-size: 1.25em; }
         display: flex;
         transition: 400ms ease-in-out;
     }
-    #hero .firstslide,.secondslide,.thirdslide,.fourthslide{
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    #hero .slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
     }
     #hero .firstslide{
         background-image: 
