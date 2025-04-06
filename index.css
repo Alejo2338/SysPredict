@@ -480,5 +480,23 @@ footer{
     height: 400vh;
     transition: transform 400ms ease-in-out;
 }
+    /* Ajuste para que el slider se vea más grande en móviles */
+@media (max-width: 720px) {
+    #hero {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    #hero .content {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    #hero .slide {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
 
 }
