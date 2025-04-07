@@ -421,6 +421,17 @@ footer{
         min-height: 100vh;
     }
 }
+/* Hacer más grande menú y logo en móviles */
+@media (max-width: 768px) {
+  .menu-inicio {
+    font-size: 24px;  /* Texto del menú más grande */
+  }
+
+  .logo-inicio {
+    width: 220px;  /* Logo más grande */
+  }
+}
+
 
 
 }
